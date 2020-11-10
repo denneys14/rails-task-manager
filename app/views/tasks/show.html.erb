@@ -1,0 +1,12 @@
+<h1><%= @task.title %></h1>
+​
+<h3><%= @task.details %></h3>
+
+
+<%= check_box_tag("completed", {checked: true}) %> <h3><%= @checked %></h3>
+<%= link_to "Delete #{@task.title}", task_path(@task), method: :delete, data: { confirm: "You sure?" } %>
+
+
+<a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/restaurants/2"></a>
+<br></br>
+<%= link_to "back to task list", tasks_path %>

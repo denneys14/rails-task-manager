@@ -1,0 +1,13 @@
+<h1>view all tasks</h1>
+<ul>
+  <% @tasks.each do |task| %>
+      <%= check_box_tag :task, checked = true %>
+      <%= link_to task.title.upcase, task_path(task) %>
+      <%= hidden_field_tag :task, '' %>
+<!--       <%= task.title %>
+ -->  <br></br>
+  <% end %>
+  <br></br>
+
+  <%= link_to "Add a new task", tasks_new_path %>
+</ul>
